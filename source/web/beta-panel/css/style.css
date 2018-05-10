@@ -1,0 +1,210 @@
+textarea {
+    resize: vertical;
+    max-height: 300px;
+    min-height: 50px;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: #333333;
+}
+
+lable {
+    font-weight: bold;
+}
+
+.content-wrapper {
+    background-color: #f1f1f1;
+}
+
+.wrapper {
+    overflow: hidden;
+}
+
+/* Loader */
+
+.loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 16px solid #f2f2f2;
+    border-radius: 50%;
+    border-top: 16px solid #6441A4;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Switch */
+
+.switch {
+    top: 7px;
+    margin-right: 5px;
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 16px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    border-radius: 34px;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    border-radius: 50%;
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #6441a5;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(13px);
+}
+
+
+/* Event log */
+
+.event-log {
+    height: 150px;
+    overflow: auto;
+    position: relative;
+}
+
+ul.recent-events {
+    padding: 0;
+}
+
+ul.recent-events li {
+    list-style: none;
+    margin-bottom: 5px;
+    line-height: 20px;
+}
+
+ul.recent-events li p {
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+
+ul.recent-events li p span {
+    margin-right: 3px;
+}
+
+span.event-date {
+    color: #999;
+}
+
+
+/* Datatables */
+
+.default-table {
+    width: 46px;
+    min-width: 46px;
+}
+
+.datatables_filter,
+.dataTables_filter {
+    float: left;
+    text-align: left;
+}
+
+.pagination>.active>a {
+    background-color: #6441a5;
+    border-color: #4b3671;
+}
+
+.pagination>.active>a:focus,
+.pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover {
+    background-color: #6441a5;
+    border-color: #4b3671;
+}
+
+.dataTable th,
+.dataTable td {
+    max-width: 25px;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    white-space: nowrap !important;
+}
+
+/* disabled class */
+.off {
+    display: none;
+}​
+
+/* Buttons */
+
+.btn:hover,
+.btn-box-tool:hover {
+    background-color: transparent !important;
+}
+
+li.disabled {
+    cursor: not-allowed;
+}
+
+a.disabled {
+    pointer-events: none;
+}
+
+.panel,
+.panel-default,
+.panel-group {
+    border-radius: 0px !important;
+}

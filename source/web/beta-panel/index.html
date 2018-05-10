@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Set the default charset -->
+    <meta charset="utf-8">
+    <!-- Tell IE to use the latest render engine -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Main title -->
+    <title>PhantomBot Dashboard</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="beta-panel/vendors/font-awesome/css/font-awesome.min.css">
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="beta-panel/vendors/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Select 2 -->
+    <link rel="stylesheet" href="beta-panel/vendors/select2/select2.min.css">
+    <!-- Datatables -->
+    <link rel="stylesheet" href="beta-panel/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css">
+    <!-- Toastr -->
+    <link rel="stylesheet" href="beta-panel/vendors/toastr/toastr.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="beta-panel/css/adminlte/AdminLTE.min.css">
+    <!-- AdminLTE Skin. -->
+    <link rel="stylesheet" href="beta-panel/css/adminlte/skins/skin-purple.min.css">
+    <!-- Pace theme -->
+    <link rel="stylesheet" href="beta-panel/vendors/PACE/pace.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="beta-panel/css/style.css">
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+
+<!-- Main body -->
+<body class="hold-transition skin-purple sidebar-mini">
+    <!-- Page loader -->
+    <div class="loader"></div>
+    <!-- Pace -->
+    <div class="pace pace-inactive">
+        <div class="pace-activity"></div>
+    </div>
+
+    <div class="main" style="display: none;">
+        <!-- Header -->
+        <div class="wrapper">
+            <header class="main-header">
+                <!-- Logo -->
+                <a href="javascript:void(0);" class="logo">
+                    <span class="logo-mini"><b>P</b>B</span>
+                    <span class="logo-lg"><b>Phantom</b>Bot</span>
+                </a>
+
+                <!-- Sidebar toggle -->
+                <nav class="navbar navbar-static-top">
+                    <a href="javascript:void(0);" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                        <span class="sr-only">Toggle navigation</span>
+                    </a>
+                </nav>
+            </header>
+
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar">
+                <section class="sidebar">
+                    <ul class="sidebar-menu" data-widget="tree">
+                        <!-- Devider -->
+                        <li class="header">MAIN NAVIGATION</li>
+
+                        <!-- Main dashboard tab -->
+                        <li class="treeview active">
+                            <a href="#dashboard.html" data-folder="dashboard">
+                                <i class="fa fa-dashboard"></i> <span> Dashboard</span>
+                            </a>
+                        </li>
+
+                        <!-- Commands tab -->
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-exclamation" style="padding-left: 3px;"></i> <span> Commands</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="#custom.html" data-folder="commands"><i class="fa fa-circle-o"></i> Custom</a></li>
+                                <li><a href="#aliases.html" data-folder="commands"><i class="fa fa-circle-o"></i> Aliases</a></li>
+                                <li><a href="#default.html" data-folder="commands"><i class="fa fa-circle-o"></i> Default</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Moderation tab -->
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-shield"></i> <span> Moderation</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="#filters.html" data-folder="moderation"><i class="fa fa-circle-o"></i> Filters</a></li>
+                                <li><a href="#whitelist.html" data-folder="moderation"><i class="fa fa-circle-o"></i> Whitelist</a></li>
+                                <li><a href="#blacklist.html" data-folder="moderation"><i class="fa fa-circle-o"></i> Blacklist</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Permission tab -->
+                        <li class="treeview">
+                            <a href="#permissions.html" data-folder="permissions">
+                                <i class="fa fa-lock"></i> <span> Permissions</span>
+                            </a>
+                        </li>
+
+                        <!-- Timers tab -->
+                        <li class="treeview">
+                            <a href="#timers.html" data-folder="timers">
+                                <i class="fa fa-clock-o"></i> <span> Timers</span>
+                            </a>
+                        </li>
+
+                        <!-- Alerts tab -->
+                        <li class="treeview">
+                            <a href="#alerts.html" data-folder="alerts">
+                                <i class="fa fa-bullhorn"></i> <span> Alerts</span>
+                            </a>
+                        </li>
+
+                        <!-- Loyalty tab -->
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-star"></i> <span> Loyalty</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="#currency.html" data-folder="loyalty"><i class="fa fa-circle-o"></i> Currency</a></li>
+                                <li><a href="#loyalty.html" data-folder="loyalty"><i class="fa fa-circle-o"></i> Loyalty</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Ranks tab -->
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-user"></i> <span> Ranking</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="#globalRanks.html" data-folder="ranking"><i class="fa fa-circle-o"></i> Global</a></li>
+                                <li><a href="#customRanks.html" data-folder="ranking"><i class="fa fa-circle-o"></i> Custom</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Quotes tab -->
+                        <li class="treeview">
+                            <a href="#quotes.html" data-folder="quotes">
+                                <i class="fa fa-quote-right"></i> <span> Quotes</span>
+                            </a>
+                        </li>
+
+                        <!-- Keywords tab -->
+                        <li class="treeview disabled">
+                            <a href="#keywords.html" class="disabled" data-folder="keywords">
+                                <i class="fa fa-key"></i> <span> Keywords</span>
+                            </a>
+                        </li>
+
+                        <!-- Games tab -->
+                        <li class="treeview disabled">
+                            <a href="#" class="disabled">
+                                <i class="fa fa-gamepad"></i> <span> Games</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Adventures</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Roulette</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Slot Machine</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Dice Roll</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Gambling</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Giveways tab -->
+                        <li class="treeview disabled">
+                            <a href="#" class="disabled">
+                                <i class="fa fa-gift"></i> <span> Giveaways</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Raffle</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Ticket Raffle</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Auction</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Extra tab -->
+                        <li class="treeview disabled">
+                            <a href="#" class="disabled">
+                                <i class="fa fa-magic"></i> <span> Extra</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Dual Stream</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Death Counter</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Highlights</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Audio tab -->
+                        <li class="treeview disabled">
+                            <a href="#" class="disabled">
+                                <i class="fa fa-music"></i> <span> Audio</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Custom Sounds</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Songrequests</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Settings tab -->
+                        <li class="treeview disabled">
+                            <a href="#" class="disabled">
+                                <i class="fa fa-cog"></i> <span> Settings</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Bot</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Commands</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Tips</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i> Modules</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+            </aside>
+
+            <!-- Content Wrapper. Contains page content -->
+            <aside class="content-wrapper">
+                <div id="page-content"></div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- jQuery 3 -->
+    <script src="beta-panel/vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="beta-panel/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Pace -->
+    <script src="beta-panel/vendors/PACE/pace.min.js"></script>
+    <!-- Toastr -->
+    <script src="beta-panel/vendors/toastr/toastr.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="beta-panel/js/adminlte/adminlte.min.js"></script>
+    <!-- Select2 -->
+    <script src="beta-panel/vendors/select2/select2.full.min.js"></script>
+    <!-- Datatables -->
+    <script src="beta-panel/vendors/datatables.net-bs/js/jquery.dataTables.min.js"></script>
+    <script src="beta-panel/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <!-- Panel config script -->
+    <script src="beta-panel/js/utils/panelConfig.js"></script>
+    <!-- Ajax page loader -->
+    <script src="beta-panel/js/utils/ajaxLoader.js"></script>
+    <!-- Helpers -->
+    <script src="beta-panel/js/utils/helpers.js"></script>
+    <!-- Main js file -->
+    <script src="beta-panel/js/index.js"></script>
+</body>
+
+</html>

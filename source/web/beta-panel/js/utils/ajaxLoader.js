@@ -1,0 +1,5 @@
+$(function(){function showPage(){if($('.loader').length>0){Pace.stop();$('.loader').fadeOut(3e2,function(){$('.loader').remove()});$('.main').fadeIn(2e2)}}
+function loadPage(folder,page,href){if(page!==''){helpers.log('Starting ajax request for page: '+folder+'/'+page);if(href===undefined){Pace.stop()}else{Pace.restart()}
+helpers.clearTimers();$.ajax({cache:!1,dataType:'html',url:'beta-panel/pages/'+folder+'/'+page,success:function(data){$('#page-content').html(data);if(href!==undefined){$.fn.dinamicMenu(href)}
+helpers.log('Completed ajax request for page: '+folder+'/'+page)},error:function(err){helpers.logError('Failed to load page ('+page+') => '+err.statusText,!0)}})}}
+$('.sidebar-menu a').on('click',function(){loadPage($(this).data('folder'),$(this).attr('href').substring(1),this.href)});$.showPage=showPage;$.loadPage=loadPage})
