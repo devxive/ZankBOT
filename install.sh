@@ -9,7 +9,6 @@
 ## lead developer Lahmizzar                                ##
 #############################################################
 clear
-PBVERSION="https://github.com/PhantomBot/PhantomBot/releases/download/v2.4.0.3/PhantomBot-2.4.0.3.zip"
 #############################################################
 ## TODO
 ## CHECK FOR MISSING THINGS AND BUILD HOW TO
@@ -90,12 +89,22 @@ WantedBy=multi-user.target
 EOL
 
 systemctl daemon-reload
+systemctl disable ${USERNAME}
 systemctl enable ${USERNAME}
+#UBUNTU 14.04
+#sudo update-rc.d ${USERNAME} enable
 
 echo "${USERNAME} ALL=NOPASSWD: /bin/systemctl start ${USERNAME}, /bin/systemctl stop ${USERNAME}, /bin/systemctl restart ${USERNAME}, /bin/systemctl status ${USERNAME}" >> /etc/sudoers
 fi
+
+echo "Setting up extra backup every 24 hours"
+sudo -H -u ${USERNAME} mkdir -p /home/${USERNAME}/meebot-bkp
+apt-get install bzip2
+crontab -l -u ${USERNAME} | echo "1 4 * * * umask 0007;/bin/tar --exclude=/home/${USERNAME}/meebot/lib --exclude=/home/${USERNAME}/meebot/web -cjf /home/${USERNAME}/meebot-bkp/"'$(/bin/date +\%Y-\%m-\%d-\%H_\%M_\%S_\%3N).tar.bz2'" /home/${USERNAME}/meebot/ >>/home/${USERNAME}/meebot-bkp/backup_meebot.log 2>&1" | crontab -u ${USERNAME} -
+
 
 echo
 echo "Melden Sie sich mit dem neuen Benutzernamen folgendermaßen an (Es wird kein Passwort benötigt):"
 echo "su - $USERNAME"
 echo "Starten Sie den Bot anschließend mit sudo systemctl start $USERNAME"
+echo "NICHT vergessen, die Firewallregeln anzupassen: Beispiel am Standardport 25000 => TCP 25000-25004 freigeben!!!"
