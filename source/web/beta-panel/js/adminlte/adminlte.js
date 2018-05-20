@@ -441,6 +441,11 @@ function($) {
         Plugin.call($(this), 'toggle')
     })
 
+    // Auto close sidebar.
+    $('.content-wrapper, .main-sidebar').on('click', function() {
+        ControlSidebar.prototype.collapse();
+    })
+
 }(jQuery)
 
 

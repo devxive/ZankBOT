@@ -33,7 +33,7 @@
                         <p>Views</p>
                     </div>
                     <div class="icon">
-                        <i class="fa fa-users"></i>
+                        <i class="fa fa-eye"></i>
                     </div>
                 </div>
             </div>
@@ -58,8 +58,8 @@
                         <h3 id="dashboard-viewers" style="cursor: pointer;">0</h3>
                         <p>Viewers</p>
                     </div>
-                    <div class="icon">
-                        <i class="fa fa-eye"></i>
+                    <div class="icon icon-override">
+                        <i class="fa fa-users"></i>
                     </div>
                 </div>
             </div>
@@ -84,14 +84,14 @@
                 <!-- Split the section in half. -->
                 <div class="row">
                     <!-- Left section -->
-                    <div class="col-md-6">
+                    <div class="col-md-6" id="twitch-chat-box">
                         <div class="box box-solid">
                             <div id="twitch-chat-iframe"></div>
                         </div>
                     </div>
 
                     <!-- Right section -->
-                    <div class="col-md-6">
+                    <div class="col-md-6" id="twitch-player-box">
                         <div class="box box-solid">
                             <div id="twitch-player-iframe"></div>
                         </div>
@@ -138,7 +138,7 @@
                         </div>
                         <!-- Footer of the box -->
                         <div class="box-footer">
-                            <button type="button" class="btn btn-primary pull-right" id="dashboard-btn-update">Update</button>
+                            <button type="button" class="btn btn-primary pull-right" id="dashboard-btn-update" data-candisable="true">Update</button>
                         </div>
                     </form>
                 </div>
@@ -153,11 +153,19 @@
                         <div class="box-body">
                             <!-- Permit user -->
                             <div class="form-group">
-                                <label>Permit User</label>
+                                <label>User Action</label>
                                 <div class="input-group input-group-md">
-                                    <input type="text" class="form-control" placeholder="Username" data-toggle="tooltip" title="Enter a user to permit.">
+                                    <input type="text" class="form-control" id="user-action-user" placeholder="Username" data-toggle="tooltip" title="Enter a username.">
                                     <span class="input-group-btn">
-                                        <button type="button" class="btn btn-primary btn-flat" id="permit-btn">Permit</button>
+                                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Actions
+                                            <span class="fa fa-caret-down"></span>
+                                        </button>
+                                        <ul class="dropdown-menu pull-right">
+                                            <li class="user-action"><a href="#">Permit</a></li>
+                                            <li class="user-action"><a href="#">Shoutout</a></li>
+                                            <li class="user-action"><a href="#">Raid</a></li>
+                                            <li class="user-action"><a href="#">Host</a></li>
+                                        </ul>
                                     </span>
                                 </div>
                             </div>

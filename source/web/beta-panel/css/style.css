@@ -14,6 +14,15 @@ lable {
     font-weight: bold;
 }
 
+/* Fix large icon on dashboard number panels */
+.small-box .icon-override {
+    font-size: 85px !important;
+}
+
+.small-box:hover .icon-override {
+    font-size: 90px !important;
+}
+
 .content-wrapper {
     background-color: #f1f1f1;
 }
@@ -21,44 +30,6 @@ lable {
 .wrapper {
     overflow: hidden;
 }
-
-/* Loader */
-
-.loader {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    z-index: 1;
-    width: 150px;
-    height: 150px;
-    margin: -75px 0 0 -75px;
-    border: 16px solid #f2f2f2;
-    border-radius: 50%;
-    border-top: 16px solid #6441A4;
-    width: 120px;
-    height: 120px;
-    -webkit-animation: spin 2s linear infinite;
-    animation: spin 2s linear infinite;
-}
-
-@-webkit-keyframes spin {
-    0% {
-        -webkit-transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(360deg);
-    }
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
 
 /* Switch */
 
@@ -155,6 +126,11 @@ span.event-date {
     min-width: 46px;
 }
 
+.default-table-large {
+    width: 47px;
+    min-width: 47px;
+}
+
 .datatables_filter,
 .dataTables_filter {
     float: left;
@@ -207,4 +183,99 @@ a.disabled {
 .panel-default,
 .panel-group {
     border-radius: 0px !important;
+}
+
+/* Sweetalert */
+.swal-modal {
+    border-radius: 0px;
+}
+
+.swal-button--cancel,
+.swal-button--cancel:focus,
+.swal-button--cancel:active {
+    background-color: #f4f4f4;
+    color: #444;
+    border: 1px solid #ddd;
+    border-radius: 0px;
+}
+
+.swal-button--cancel:hover {
+    background-color: #e7e7e7;
+    color: #444;
+    border: 1px solid #ddd;
+    border-radius: 0px;
+}
+
+.swal-button--danger,
+.swal-button--danger:focus,
+.swal-button--danger:active  {
+    background-color: #dd4b39 !important;
+    border: 1px solid #d73925 !important;
+    border-radius: 0px;
+}
+
+.swal-button--danger:hover {
+    background-color: #d73925 !important;
+    border: 1px solid #d73925 !important;
+    border-radius: 0px;
+}
+
+.swal-button--confirm,
+.swal-button--confirm:focus,
+.swal-button--confirm:active {
+    background-color: #6441a5;
+    text-decoration: none;
+    border: 1px solid #2f098c;
+    border-radius: 0px;
+}
+
+.swal-button--confirm:hover {
+    background-color: #6b49ab;
+    text-decoration: none;
+    border: 1px solid #2f098c;
+    border-radius: 0px;
+}
+
+.swal-button {
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    box-shadow: none;
+}
+
+.swal-button:focus {
+    box-shadow: none;
+}
+
+/* Tooltips */
+.tooltip-inner {
+    background-color: #2e2e2e;
+    color: #eee;
+    border-radius: 0;
+}
+
+.tooltip.top .tooltip-arrow {
+    border-top-color: #2e2e2e;
+    border-radius: 0;
+}
+
+.tooltip.right .tooltip-arrow {
+    border-right-color: #2e2e2e;
+    border-radius: 0;
+}
+
+.tooltip.bottom .tooltip-arrow {
+    border-bottom-color: #2e2e2e;
+    border-radius: 0;
+}
+
+.tooltip.left .tooltip-arrow {
+    border-left-color: #2e2e2e;
+    border-radius: 0;
+}
+
+#toast-container>div {
+    border-radius: 0;
 }

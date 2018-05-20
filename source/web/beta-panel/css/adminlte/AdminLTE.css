@@ -1114,6 +1114,7 @@ a:focus {
 /*Dropdowns in general*/
 
 .dropdown-menu {
+    border-radius: 0;
     box-shadow: none;
     border-color: #eee;
 }

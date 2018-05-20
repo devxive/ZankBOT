@@ -1,9 +1,10 @@
 <main>
     <!-- Header -->
     <section class="content-header">
-        <h1>Loyalty</h1>
+        <h1>Currency</h1>
         <ol class="breadcrumb">
             <li><a href="javascript:void(0);"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li>Loyalty</li>
             <li class="active">Currency</li>
         </ol>
     </section>
@@ -267,42 +268,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="box box-solid">
-                            <div class="box-header with-border">
-                                <h3 class="box-title">Currency Manager</h3>
-                            </div>
-                            <form role="form">
-                                <!-- Box content -->
-                                <div class="box-body">
-                                    <!-- Username -->
-                                    <div class="form-group">
-                                        <lable>Username</lable>
-                                        <input type="text" class="form-control" id="points-username" placeholder="PhantomBot"  data-toggle="tooltip" title="Username to edit the points for.">
-                                    </div>
-
-                                    <!-- Number of points -->
-                                    <div class="form-group">
-                                        <lable>Currency</lable>
-                                        <div class="input-group input-group-md">
-                                            <input type="number" class="form-control" id="points-username-points" placeholder="0" data-toggle="tooltip" title="Amount of points the user will have.">
-                                            <span class="input-group-btn">
-                                                <button type="button" class="btn btn-success btn-flat" id="points-get-user" data-toggle="tooltip"
-                                                    title="Get the user's points if he has any.">Get</button>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Box footer -->
-                                <div class="box-footer">
-                                    <button type="button" class="btn btn-primary pull-right" id="points-save-user" data-toggle="tooltip" title="Save the user's points."> Save</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div class="box box-solid">
                             <div class="box-header with-border">
                                 <h3 class="box-title">Currency Penalty</h3>
@@ -328,6 +294,46 @@
                                 <!-- Box footer -->
                                 <div class="box-footer">
                                     <button type="button" class="btn btn-primary pull-right" id="points-panalty-btn"> Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right section -->
+            <section class="col-lg-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="box box-solid">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">Currency Manager</h3>
+                            </div>
+                            <form role="form">
+                                <!-- Box content -->
+                                <div class="box-body">
+                                    <!-- Username -->
+                                    <div class="form-group">
+                                        <lable>Username</lable>
+                                        <input type="text" class="form-control" id="points-username" placeholder="PhantomBot"  data-toggle="tooltip" title="Username to edit the points for.">
+                                    </div>
+
+                                    <!-- Number of points -->
+                                    <div class="form-group">
+                                        <lable>Currency</lable>
+                                        <div class="input-group input-group-md">
+                                            <input type="number" class="form-control" id="points-username-points" placeholder="0" data-toggle="tooltip" title="Amount of points the user will have.">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-success btn-flat" id="points-get-user" data-toggle="tooltip"
+                                                    title="Get the user's points if they have any.">Get</button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Box footer -->
+                                <div class="box-footer">
+                                    <button type="button" class="btn btn-primary pull-right" id="points-save-user" data-toggle="tooltip" title="Save the user's points."> Save</button>
                                 </div>
                             </form>
                         </div>
@@ -368,31 +374,6 @@
                                         <button type="button" class="btn btn-default" id="points-takeall-btn" data-toggle="tooltip"
                                             title="Take points from everyone in the channel."> Take from All</button>
                                     </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Right section -->
-            <section class="col-lg-6">
-                <div class="row">
-                    <!-- Top Currency -->
-                    <div class="col-md-12">
-                       <div class="box box-solid">
-                            <div class="box-header with-border">
-                                <h3 class="box-title" id="currency-top-title">Top 100 Currency</h3>
-                            </div>
-                            <form role="form">
-                              <!-- Box content -->
-                                <div class="box-body">
-                                    <div class="btn-toolbar pull-right">
-                                        <button class="btn btn-primary btn-sm" type="button" id="currency-load-more"><i class="fa fa-undo"></i>&nbsp; Load More</button>
-                                        <button class="btn btn-primary btn-sm" type="button" id="currency-reload"><i class="fa fa-refresh"></i>&nbsp; Refresh</button>
-                                    </div>
-
-                                    <table id="currencyTop" class="table table-bordered table-hover"></table>
                                 </div>
                             </form>
                         </div>

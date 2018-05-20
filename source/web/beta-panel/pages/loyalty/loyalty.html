@@ -4,6 +4,7 @@
         <h1>Loyalty</h1>
         <ol class="breadcrumb">
             <li><a href="javascript:void(0);"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li>Loyalty</li>
             <li class="active">Loyalty</li>
         </ol>
     </section>
@@ -97,7 +98,10 @@
                         </div>
                     </div>
                 </div>
+            </section>
 
+            <!-- Right section -->
+            <section class="col-lg-6">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="box box-solid">
@@ -120,7 +124,7 @@
                                             <input type="number" class="form-control" id="time-username-time" placeholder="0" data-toggle="tooltip" title="Amount of time the user will have.">
                                             <span class="input-group-btn">
                                                 <button type="button" class="btn btn-success btn-flat" id="time-get-user" data-toggle="tooltip"
-                                                    title="Get the user's time if he has any.">Get</button>
+                                                    title="Get the user's time if they have any.">Get</button>
                                             </span>
                                         </div>
                                     </div>
@@ -129,31 +133,6 @@
                                 <!-- Box footer -->
                                 <div class="box-footer">
                                     <button type="button" class="btn btn-primary pull-right" id="time-save-user" data-toggle="tooltip" title="Save the user's time."> Save</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Right section -->
-            <section class="col-lg-6">
-                <div class="row">
-                    <!-- Top Loyalty -->
-                    <div class="col-md-12">
-                       <div class="box box-solid">
-                            <div class="box-header with-border">
-                                <h3 class="box-title" id="loyalty-top-title">Top 100 Loyalty</h3>
-                            </div>
-                            <form role="form">
-                              <!-- Box content -->
-                                <div class="box-body">
-                                    <div class="btn-toolbar pull-right">
-                                        <button class="btn btn-primary btn-sm" type="button" id="loyalty-load-more"><i class="fa fa-undo"></i>&nbsp; Load More</button>
-                                        <button class="btn btn-primary btn-sm" type="button" id="loyalty-reload"><i class="fa fa-refresh"></i>&nbsp; Refresh</button>
-                                    </div>
-
-                                    <table id="loyaltyTop" class="table table-bordered table-hover"></table>
                                 </div>
                             </form>
                         </div>
